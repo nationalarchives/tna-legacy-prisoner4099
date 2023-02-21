@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 <title>Prisoner 4099 - Listen to the play</title>
+<!--#include virtual="/includes/google-analytics-gtm-head.inc" -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="/css/learningcurve.css" media="all" />
 <link href="../css/4099styles.css" type="text/css" rel="stylesheet" media="all" />
@@ -9,16 +10,14 @@
 <!--[if lt IE 7]>
 <link href="../css/4099styles-iehack.css" type="text/css" rel="stylesheet" media="screen" />
 <![endif]-->
+<link rel="stylesheet" type="text/css" href="../styles/style.css"></link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
-<script type="text/javascript" src="../js/ufo.js"></script>
-<script type="text/javascript">
-	var FO = { movie:"../flash/player.swf", width:"300", height:"20", majorversion:"8", build:"0", id:"mp3player",  xi:"false", allowscriptaccess:"always", flashvars:"file=../flash/play.xml&amp;autostart=false" };
-	UFO.create(FO, "play-container", "player-controls","chapters", "play" );
-</script>
 
-<!--#include virtual="/includes/ga.inc" -->
+
 </head>
 <body>
+<!--#include virtual="/includes/google-analytics-gtm-body.inc" -->
 
 <!--#include virtual="/includes/menusmicrosites/p4099_breadcrumb.inc" -->
 
@@ -58,47 +57,98 @@
 
 		<p>It opens with 'Newsnight' presenters reporting from William’s deathbed in 1906.  Using 'archived footage', they then travel back to 1872 to the point at which William was sentenced to imprisonment.</p>
 
-		<div id="player">
+    <div id="audio-tabs">
 
-			<div id="player-controls">
+        <div id="chapter-helper">The radio play is divided into separate chapters.
+                You can listen online or download them.
+        </div>
 
-				<div id="chapter-helper">The radio play is divided into separate chapters. You can listen online or download them.</div>
 
-			</div>
+        <div id="player">
+            <ul role="tablist">
+                <!-- 1. Introduction-->
+                <li id="introduction-tab" class="tab" role="tab" aria-selected="true">
+                    <button class="btn-active">1. Introduction</button>
 
-			<div id="player-col">
+                </li>
+                <div class="row" aria-labelledby="introduction-tab" role="tabpanel">
+                    <audio controls>
+                        <source src="http://www.nationalarchives.gov.uk/education/prisoner4099/mp3/play-1.mp3"
+                                type="audio/mpeg">
+                        Your browser does not support the audio element
+                    </audio>
+                </div>
+                <!--2. William Tower's on his deathbed (1906) -->
+                <li id="william-Towers-tab" class="tab" role="tab" aria-selected="false">
+                    <button class="btn-active">2. William Towers on his deathbed (1906)</button>
+                </li>
+                <div class="row" aria-labelledby="william-Towers-tab" role="tabpanel">
+                    <audio controls>
+                        <source src="http://www.nationalarchives.gov.uk/education/prisoner4099/mp3/play-2.mp3"
+                                type="audio/mpeg">
+                        Your browser does not support the audio element
+                    </audio>
+                </div>
+                <!--3. Interview with Rose, the victim (1872)-->
+                <li id="rose-tab" class="tab" role="tab" aria-selected="false">
+                    <button class="btn-active">3. Interview with Rose, the victim (1872)</button>
+                </li>
+                <div class="row" aria-labelledby="rose-tab" role="tabpanel">
+                    <audio controls>
+                        <source src="http://www.nationalarchives.gov.uk/education/prisoner4099/mp3/play-3.mp3"
+                                type="audio/mpeg">
+                        Your browser does not support the audio element
+                    </audio>
+                </div>
+                <!--4. Interview with Williams family (1872)-->
+                <li id="family-tab" class="selected tab" role="tab" aria-selected="true">
+                    <button class="btn-active">4. Interview with Williams family (1872)</button>
+                </li>
+                <div class="row" aria-labelledby="family-tab" role="tabpanel">
+                    <audio controls>
+                        <source src="http://www.nationalarchives.gov.uk/education/prisoner4099/mp3/play-4.mp3"
+                                type="audio/mpeg">
+                        Your browser does not support the audio element
+                    </audio>
+                </div>
+                <!--5. Interview with William as a young boy (1872)-->
+                <li id="young-tab" class="tab" role="tab" aria-selected="false">
+                    <button class="btn-active">5. Interview with William as a young boy (1872)</button>
+                </li>
+                <div class="row" aria-labelledby="young-tab" role="tabpanel">
+                    <audio controls>
+                        <source src="http://www.nationalarchives.gov.uk/education/prisoner4099/mp3/play-5.mp3"
+                                type="audio/mpeg">
+                        Your browser does not support the audio element
+                    </audio>
+                </div>
+                <!--6. Interview with the Magistrates (1872)-->
+                <li id="magistrates-tab" class="selected tab" role="tab" aria-selected="true">
+                    <button class="btn-active">6. Interview with the Magistrates (1872)</button>
+                </li>
+                <div class="row" aria-labelledby="magistrates-tab" role="tabpanel">
+                    <audio controls>
+                        <source src="http://www.nationalarchives.gov.uk/education/prisoner4099/mp3/play-6.mp3"
+                                type="audio/mpeg">
+                        Your browser does not support the audio element
+                    </audio>
+                </div>
+                <!--7. Credits-->
+                <li id="credits-tab" class="selected tab" role="tab" aria-selected="true">
+                    <button class="btn-active">7. Credits</button>
+                </li>
+                <div class="row" aria-labelledby="credits-tab" role="tabpanel">
+                    <audio controls>
+                        <source src="http://www.nationalarchives.gov.uk/education/prisoner4099/mp3/play-7.mp3"
+                                type="audio/mpeg">
+                        Your browser does not support the audio element
+                    </audio>
+                </div>
+            </ul>
+        </div>
+    </div>
 
-				<h3 class="ttl-chap">Chapters</h3>
 
-				<ol id="chapters">
-
-					<li class="top"><a href="../mp3/play-1.mp3" target="_blank">Introduction</a></li>
-
-					<li class="alt"><a href="../mp3/play-2.mp3" target="_blank">William Towers on his deathbed (1906)</a></li>
-
-					<li><a href="../mp3/play-3.mp3" target="_blank">Interview with Rose, the victim (1872)</a></li>
-
-					<li class="alt"><a href="../mp3/play-4.mp3" target="_blank">Interview with William's family (1872)</a></li>
-
-					<li><a href="../mp3/play-5.mp3" target="_blank">Interview with William as a young boy (1872)</a></li>
-
-					<li class="alt"><a href="../mp3/play-6.mp3" target="_blank">Interview with the Magistrates (1872)</a></li>
-
-					<li><a href="../mp3/play-7.mp3" target="_blank">Credits</a></li>
-
-				</ol>
-
-				<div id="play-container">
-
-					<a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" target="_blank" title="link opens in a new window"><strong>Get the latest FLASH player</strong></a> to listen here.
-
-				</div>
-
-				<div class="clearing"></div>
-
-			</div>
-
-		</div>
 
 		<h3>Other ways to experience the play</h3>
 
@@ -142,7 +192,10 @@
 
 </div>
 
+
 <!--#include virtual="/includes/menu/sdc.inc" -->
+<script type="text/javascript" src="../js/script2.js"></script>
+
 </body>
 
 </html>
